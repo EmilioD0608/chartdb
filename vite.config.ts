@@ -8,6 +8,7 @@ import UnpluginInjectPreload from 'unplugin-inject-preload/vite';
 export default defineConfig({
     plugins: [
         react(),
+
         visualizer({
             filename: './stats/stats.html',
             open: false,
@@ -25,6 +26,7 @@ export default defineConfig({
             ],
         }),
     ],
+    base: './',
     resolve: {
         alias: {
             '@': path.resolve(__dirname, './src'),
